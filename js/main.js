@@ -53,18 +53,82 @@ const calcScore = () => {
 
 const sortResult = (point) => {
     let num = 0;
-    if (point <= 20) {
+    if (point < 115) {
         num = 0;
-    } else if (point <= 30) {
+    } else if (point < 129) {
         num = 1;
-    } else if (point <= 40) {
+    } else if (point < 143) {
         num = 2;
-    } else if (point <= 50) {
+    } else if (point < 157) {
         num = 3;
-    } else if (point <= 60) {
+    } else if (point < 171) {
         num = 4;
-    } else {
+    } else if (point < 185) {
         num = 5;
+    } else if (point < 200) {
+        num = 6;
+    } else if (point < 250) {
+        num = 7;
+    } else if (point < 300) {
+        num = 8;
+    } else if (point < 334) {
+        num = 9;
+    } else if (point < 367) {
+        num = 10;
+    } else if (point < 400) {
+        num = 11;
+    } else if (point < 420) {
+        num = 12;
+    } else if (point < 440) {
+        num = 13;
+    } else if (point < 460) {
+        num = 14;
+    } else if (point < 480) {
+        num = 15;
+    } else if (point < 500) {
+        num = 16;
+    } else if (point < 534) {
+        num = 17;
+    } else if (point < 567) {
+        num = 18;
+    } else if (point < 600) {
+        num = 19;
+    } else if (point < 650) {
+        num = 20;
+    } else if (point < 700) {
+        num = 21;
+    } else if (point < 725) {
+        num = 22;
+    } else if (point < 750) {
+        num = 23;
+    } else if (point < 775) {
+        num = 24;
+    } else if (point < 800) {
+        num = 25;
+    } else if (point < 850) {
+        num = 26;
+    } else if (point < 900) {
+        num = 27;
+    } else if (point < 934) {
+        num = 28;
+    } else if (point < 967) {
+        num = 29;
+    } else if (point < 1000) {
+        num = 30;
+    } else if (point < 1100) {
+        num = 31;
+    } else if (point < 1150) {
+        num = 32;
+    } else if (point < 1200) {
+        num = 33;
+    } else if (point < 1225) {
+        num = 34;
+    } else if (point < 1250) {
+        num = 35;
+    } else if (point < 1275) {
+        num = 36;
+    } else {
+        num = 37;
     }
     return num;
 }
@@ -90,13 +154,13 @@ const goResult = () => {
     const animal = document.querySelector('.result');
     const desc = document.querySelector('.res');
 
-    pTitle.innerHTML = u_name.value + ' 님의 점수는...';
-    res_point.innerHTML = point + '점';
+    pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
+    //res_point.innerHTML = point + '점';
     pin.style.marginLeft = infoList[grade].mLeft;
-    res_img.src = img_url;
+/*     res_img.src = img_url;
     res_img.alt = infoList[grade].name;
     res_img.title = infoList[grade].name;
-    res_img_div.appendChild(res_img);
+    res_img_div.appendChild(res_img); */
     animal.innerHTML = infoList[grade].name;
     desc.innerHTML = infoList[grade].desc;
 
@@ -227,7 +291,7 @@ const load = () => {
     u_name.addEventListener('blur', () => {
         try {
             if (u_name.value.length < 1) {
-                throw '이름을 입력하고 시작해 주세요.';
+                throw '이름을 입력해 주세요.';
             } 
             msg.innerHTML = '';
         } catch(err) {
@@ -238,7 +302,7 @@ const load = () => {
     start_btn.addEventListener('click', () => {
         try {
             if (u_name.value.length < 1) {
-                throw '이름을 입력하고 시작해 주세요.';
+                throw '이름을 입력해 주세요.';
             }
             msg.innerHTML = '';
             start_btn.disabled = true;
