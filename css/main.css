@@ -301,7 +301,7 @@ hr {
 }
 .linkedin {
     float: right;
-    background-image: url("../img/LI-In-Bug.png");
+    background-image: url("../img/LI-In.png");
     /* https://brand.linkedin.com/downloads */
 }
     
@@ -542,7 +542,7 @@ hr {
 .btn {
     box-sizing: border-box;
     margin: 0 30% 5px 30%;
-    width: 40%;
+    width: 45%;
     height: 50px;
     line-height: 50px;
     border-radius: 20px;
