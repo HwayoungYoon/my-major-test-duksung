@@ -1,6 +1,12 @@
-const url = 'https://dev-dain.github.io/10-things-test';
-const title = '[이미지테스트] 나를 알아보는 10가지 질문 ';
-const hash = '%2310_things_test %233분이미지테스트 %23이미지테스트 ';
+/*
+소셜 내보내기 참고
+페북, 트윗 http://dev.epiloum.net/916
+페북, 트윗 https://kipid.tistory.com/entry/Sharing-URI-through-SNS
+카톡(&인스타)..? https://citynetc.tistory.com/155
+*/
+const url = 'https://hwayoungyoon.github.io/my-major-test-duksung';
+const title = '[전공테스트] 나에게 맞는 전공은? with DUKSUNG ';
+const hash = '%23my_major_test_duksung %23my_major_test %23나에게_맞는_전공테스트 %23전공테스트 ';
 
 const fb = () => {
     window.open('https://www.facebook.com/sharer/sharer.php?u='
@@ -16,21 +22,15 @@ const tw = () => {
             name += '이에요! ';
             break;
         default:
-            name += '예요! ';
+            name += '이에요! ';
     }
     window.open('https://twitter.com/intent/tweet?text='
-        + title + '%0A' + '저는 '+ name + '' + hash + '%0A' + url, 
+        + title + '%0A' + '나에게 맞는 전공은 '+ name + '' + hash + '%0A' + url, 
         'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
     return false;
 }
 const nv = () => {
     window.open('http://share.naver.com/web/shareView.nhn?url='
-        + url + '&title=' + title, 
-        'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-    return false;
-}
-const band = () => {
-    window.open('https://band.us/plugin/share?url='
         + url + '&title=' + title, 
         'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
     return false;
