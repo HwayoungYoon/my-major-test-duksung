@@ -171,7 +171,7 @@ body {
     letter-spacing: 6.4px;
     letter-spacing: 0.4rem;
 }
-.time-logo {
+/* .time-logo {
     display: inline-block;
     margin: 0 auto;
     margin-top: 20px;
@@ -179,15 +179,15 @@ body {
     height: 30px;
     background-image: url('../img/clock.png');
     background-size: cover;
-    /*
+    
     자료 출처
     https://commons.wikimedia.org/wiki/File:Alarms_%26_Clock_icon.png
-    */
+   
 }
 .time-logo + div {
     font-weight: lighter;
     letter-spacing: -0.5px;
-}
+} */
 hr {
     margin: 20px 0;
     border: 1.5px dashed #222;
@@ -250,10 +250,10 @@ hr {
     line-height: 60px;
     border-radius: 50px;
     text-align: center;
-    background-color: rgba(0, 135, 245, 0.9);
+    background-color: rgba(183, 0, 80, 0.9);
     color: #fff;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
     font-size: 2rem;
     animation: fade-in 0.5s ease-out 1.9s both, 
             going-down 0.5s ease-out 1.9s both,
@@ -299,13 +299,10 @@ hr {
     float: right;
     background-image: url("../img/github-logo.png");
 }
-.tistory {
+.linkedin {
     float: right;
-    background-image: url("../img/tistory-logo.svg");
-    /*
-        로고 출처 : https://marshall-ku.tistory.com/134
-        감사합니다!!
-    */
+    background-image: url("../img/LI-In-Bug.png");
+    /* https://brand.linkedin.com/downloads */
 }
     
 /* qna로 넘어갈 때 display: block; */
@@ -320,7 +317,7 @@ hr {
     border: 3px solid #ddd;
     border-radius: 20px;
     background: #fff;
-    animation: fade-in 0.3s ease-in-out;
+    animation: fade-in 0.1s ease-in-out; /* 수정-확인필요 */
 }
 .status {
     height: 100%;
@@ -407,7 +404,7 @@ hr {
 }
 .wait {
     padding-bottom: 10px;
-    font-size: 27.2px;
+    font-size: 20.2px;
     font-size: 1.7rem;
     font-weight: lighter;
     text-align: center;
@@ -540,13 +537,6 @@ hr {
     /*
     자료 출처
     https://www.facebook.com/184030231730640/photos/1175959155871071/
-    */
-}
-.band {
-    background-image: url('../img/band.png');
-    /*
-    자료 출처
-    https://upload.wikimedia.org/wikipedia/commons/3/30/2._BAND_Icon.png
     */
 }
 .btn {
