@@ -45,8 +45,32 @@ const copy = () => {
 
 const calcScore = () => {
     let point = 0;
-    for (let i = 0; i < ENDPOINT; i++) {
-        point += qnaList[i].a[select[i]].score;
+    if (qnaList[1].a == select[2] && qnaList[8].a == select[1]) {/* 어문 */
+        num = 100;
+    } else if (qnaList[8].a == select[1] && qnaList[9].a == select[1]) {/* 역사 */
+        num = 200;
+    } else if (qnaList[4].a == select[3] && (qnaList[5].a == select[3] || qnaList[5].a == select[4])) {/* 상경 */
+        num = 300;
+    } else if (qnaList[1].a == select[2]) {/* 사회과학 */
+        num = 400;
+    } else if (qnaList[2].a == select[0] && qnaList[4].a == select[4] && qnaList[5].a == select[1]) {/* 복지 */
+        num = 500;
+    } else if (qnaList[8].a == select[0]) {/* 복합 */
+        num = 600;
+    } else if ((qnaList[4].a == select[2] || qnaList[5].a == select[2]) && qnaList[8].a == select[0] && qnaList[0].a == select[0]) {/* 코딩 */
+        num = 700;
+    } else if ((qnaList[4].a == select[2] || qnaList[5].a == select[2]) && qnaList[8].a == select[1] && qnaList[0].a == select[1]) {/* 자연 */
+        num = 800;
+    } else if ((qnaList[4].a == select[2] || qnaList[5].a == select[2]) && qnaList[8].a == select[0] && qnaList[0].a == select[2]) {/* 공학 */
+        num = 900;
+    } else if (qnaList[3].a == select[0]) {/* 생체 */
+        num = 1000;
+    } else if (qnaList[4].a == select[1] && qnaList[5].a == select[5] && qnaList[8].a == select[1]) {/* 순수미술 */
+        num = 1100;
+    } else if (qnaList[4].a == select[1] && qnaList[5].a == select[5] && qnaList[8].a == select[0]) {/* 디자인 */
+        num = 1200;
+    } else {/* 랜덤(100,200,300, ... ,1200 중 1개)) */
+        num = ((int)(Math.random()*12) + 1)*100;
     }
     return point;
 }
