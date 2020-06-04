@@ -75,8 +75,6 @@ const calcScore = () => {
     return point;
 }
 
-/* elif 말고 switch? 사용 */
-
 const sortResult = (point) => {
     let num = 0;
     if (point < 115) {
