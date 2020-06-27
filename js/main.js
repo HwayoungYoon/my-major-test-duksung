@@ -287,7 +287,7 @@ const begin = () => {
     }, 1000);
 }
 
-const load = () => {
+/* const load = () => {
     const msg = document.querySelector('.check-name');
     const start_btn = document.querySelector('.start');
 
@@ -315,6 +315,6 @@ const load = () => {
         }
     });
     
-}
+} */
 
 window.onload = load();
