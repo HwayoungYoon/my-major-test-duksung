@@ -229,7 +229,7 @@ hr {
     animation: fade-in 0.4s ease-out 1.4s both, 
             going-down 0.4s ease-out 1.4s both;
 }
-.check-name {
+/* .check-name {
     display: inline-block;
     margin: 10px 10%;
     width: 80%;
@@ -238,7 +238,7 @@ hr {
 .warning {
     color: rgb(231, 20, 20, 0.8);
     font-weight: bold;
-}
+} */
 .start-wrap {
     margin: 0 20% 20px 20%;
     width: 60%;
@@ -299,10 +299,9 @@ hr {
     float: right;
     background-image: url("../img/github-logo.png");
 }
-.linkedin {
+.instagram {
     float: right;
-    background-image: url("../img/LI-In.png");
-    /* https://brand.linkedin.com/downloads */
+    background-image: url("../img/insta-logo.png");
 }
     
 /* qna로 넘어갈 때 display: block; */
