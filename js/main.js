@@ -5,7 +5,8 @@ const u_name = document.querySelector('input[type=text]');
 const wrap = document.getElementById('wrap');
 const tabletMQL = window.matchMedia("all and (min-width: 768px)");
 const pcMQL = window.matchMedia("all and (min-width: 1024px)");
-const ENDPOINT = 11; /* 질문 갯수에 맞게 수정 */
+/* 질문 갯수에 맞게 ENDPOINT 수정 */
+const ENDPOINT = 11;
 const select = [];
 let qIdx = -1;
 
@@ -43,38 +44,16 @@ const copy = () => {
     document.body.removeChild(tmp);
 }
 
+/* 결과 계산식 */
 const calcScore = () => {
     let point = 0;
-    if (qnaList[1].a[select[2]] && qnaList[8].a[select[1]]) {/* 어문 */
-        num = 100;
-    } else if (qnaList[8].a[select[1]] && qnaList[9].a[select[1]]) {/* 역사 */
-        num = 200;
-    } else if (qnaList[4].a[select[3]] && (qnaList[5].a[select[3]] || qnaList[5].a[select[4]])) {/* 상경 */
-        num = 300;
-    } else if (qnaList[1].a[select[2]]) {/* 사회과학 */
-        num = 400;
-    } else if (qnaList[2].a[select[0]] && qnaList[4].a[select[4]] && qnaList[5].a[select[1]]) {/* 복지 */
-        num = 500;
-    } else if (qnaList[8].a[select[0]]) {/* 복합 */
-        num = 600;
-    } else if ((qnaList[4].a[select[2]] || qnaList[5].a[select[2]]) && qnaList[8].a[select[0]] && qnaList[0].a[select[0]]) {/* 코딩 */
-        num = 700;
-    } else if ((qnaList[4].a[select[2]] || qnaList[5].a[select[2]]) && qnaList[8].a[select[1]] && qnaList[0].a[select[1]]) {/* 자연 */
-        num = 800;
-    } else if ((qnaList[4].a[select[2]] || qnaList[5].a[select[2]]) && qnaList[8].a[select[0]] && qnaList[0].a[select[2]]) {/* 공학 */
-        num = 900;
-    } else if (qnaList[3].a[select[0]]) {/* 생체 */
-        num = 1000;
-    } else if (qnaList[4].a[select[1]] && qnaList[5].a[select[5]] && qnaList[8].a[select[1]]) {/* 순수미술 */
-        num = 1100;
-    } else if (qnaList[4].a[select[1]] && qnaList[5].a[select[5]] && qnaList[8].a[select[0]]) {/* 디자인 */
-        num = 1200;
-    } else {/* 랜덤(100,200,300, ... ,1200 중 1개)) */
-        num = ((int)(Math.random()*12) + 1)*100;
+    for (let i = 0; i < ENDPOINT; i++) {
+        point += qnaList[i].a[select[i]].score;
     }
     return point;
 }
 
+/* 계산식 결과 이용한 분류 */
 const sortResult = (point) => {
     let num = 0;
     if (point < 115) {
@@ -170,22 +149,22 @@ const goResult = () => {
     const point = calcScore();
     const grade = sortResult(point);
     const pTitle = document.querySelector('.p');
-    const res_point = document.querySelector('.point');
+    /* const res_point = document.querySelector('.point');
     const pin = document.querySelector('.pin');
     const img_url = 'img/image-' + grade + '.png';
     const res_img = document.createElement('img');
-    const res_img_div = document.querySelector('.art');
-    const animal = document.querySelector('.result');
+    const res_img_div = document.querySelector('.art'); */
+    const major = document.querySelector('.result');
     const desc = document.querySelector('.res');
 
     pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
-    //res_point.innerHTML = point + '점';
+    /* res_point.innerHTML = point + '점';
     pin.style.marginLeft = infoList[grade].mLeft;
-/*     res_img.src = img_url;
+    res_img.src = img_url;
     res_img.alt = infoList[grade].name;
     res_img.title = infoList[grade].name;
     res_img_div.appendChild(res_img); */
-    animal.innerHTML = infoList[grade].name;
+    major.innerHTML = infoList[grade].name;
     desc.innerHTML = infoList[grade].desc;
 
     setTimeout(() => {
