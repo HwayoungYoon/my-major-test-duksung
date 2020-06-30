@@ -303,6 +303,7 @@ hr {
     float: right;
     background-image: url("../img/insta-logo.png");
 }
+/* 이미지 출처 : https://m.blog.naver.com/mymiz1004/221531122134 */
     
 /* qna로 넘어갈 때 display: block; */
 #qna {
@@ -421,7 +422,7 @@ hr {
     text-align: center;
     opacity: 0;
 }
-/* #score-box {
+#score-box {
     margin-bottom: 50px;
 }
 #score-box > .title {
@@ -477,7 +478,7 @@ hr {
     width: 100%;
     height: 100%;
     object-fit: contain;
-} */
+}
 .desc {
     margin: 30px 7.5%;
     width: 85%;
@@ -567,7 +568,7 @@ hr {
 #intro-box {
     padding-top: 20px;
 }
-/* .pro_pic {
+.pro_pic {
     margin: 0 auto;
     width: 60px;
     height: 60px;
@@ -589,7 +590,7 @@ hr {
     margin: 0 7.5% 20px 7.5%;
     font-size: 16.8px;
     font-size: 1.05rem;
-} */
+}
 .go-share {
     cursor: pointer;
 }
