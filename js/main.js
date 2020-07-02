@@ -148,21 +148,10 @@ const goResult = () => {
     const point = calcScore();
     const grade = sortResult(point);
     const pTitle = document.querySelector('.p');
-    /* const res_point = document.querySelector('.point');
-    const pin = document.querySelector('.pin');
-    const img_url = 'img/image-' + grade + '.png';
-    const res_img = document.createElement('img');
-    const res_img_div = document.querySelector('.art'); */
     const major = document.querySelector('.result');
     const desc = document.querySelector('.res');
 
     pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
-    /* res_point.innerHTML = point + '점';
-    pin.style.marginLeft = infoList[grade].mLeft;
-    res_img.src = img_url;
-    res_img.alt = infoList[grade].name;
-    res_img.title = infoList[grade].name;
-    res_img_div.appendChild(res_img); */
     major.innerHTML = infoList[grade].name;
     desc.innerHTML = infoList[grade].desc;
 
