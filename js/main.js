@@ -57,17 +57,17 @@ const sortResult = (point) => {
     let num = 0;
     if (point = 110) {
         num = 0;
-    } else if (point = 120) {
+    } else if (point == 120) {
         num = 1;
-    } else if (point = 130) {
+    } else if (point == 130) {
         num = 2;
-    } else if (point = 140) {
+    } else if (point == 140) {
         num = 3;
-    } else if (point = 150) {
+    } else if (point == 150) {
         num = 4;
-    } else if (point = 160) {
+    } else if (point == 160) {
         num = 5;
-    } else if (point = 170) {
+    } else if (point == 170) {
         num = 6;
     } else if (point < 235) {
         num = 7;
@@ -75,57 +75,57 @@ const sortResult = (point) => {
         num = 8;
     } else if (point < 325) {
         num = 9;
-    } else if (point = 330) {
+    } else if (point == 330) {
         num = 10;
     } else if (point < 355) {
         num = 11;
-    } else if (point = 360) {
+    } else if (point == 360) {
         num = 12;
-    } else if (point = 370) {
+    } else if (point == 370) {
         num = 13;
-    } else if (point = 410 || 430 || 470) {
+    } else if (point == 410 || point == 430 || point == 470) {
         num = 14;
-    } else if (point = 420 || 440 || 450 || 460) {
+    } else if (point == 420 || point == 440 || point == 450 || point == 460) {
         num = 15;
-    } else if (point = 510 || 520 || 530 || 560) {
+    } else if (point == 510 || point == 520 || point == 530 || point == 560) {
         num = 16;
-    } else if (point = 540 || 550 || 570) {
+    } else if (point == 540 || point == 550 || point == 570) {
         num = 17;
-    } else if (point = 610 || 640 || 660) {
+    } else if (point == 610 || point == 640 || point == 660) {
         num = 18;
-    } else if (point = 620 || 670) {
+    } else if (point == 620 || point == 670) {
         num = 19;
-    } else if (point = 630 || 650) {
+    } else if (point == 630 || point == 650) {
         num = 20;
-    } else if (point = 710 || 720 || 740 || 760) {
+    } else if (point == 710 || point == 720 || point == 740 || point == 760) {
         num = 21;
-    } else if (point = 730 || 750 || 770) {
+    } else if (point == 730 || point == 750 || point == 770) {
         num = 22;
-    } else if (point = 810 || 860) {
+    } else if (point == 810 || point == 860) {
         num = 23;
-    } else if (point = 820 || 870) {
+    } else if (point == 820 || point == 870) {
         num = 24;
-    } else if (point = 830) {
+    } else if (point == 830) {
         num = 25;
-    } else if (point = 840 || 850) {
+    } else if (point == 840 || point == 850) {
         num = 26;
-    } else if (point = 910 || 940) {
+    } else if (point == 910 || point == 940) {
         num = 27;
-    } else if (point = 920 || 960) {
+    } else if (point == 920 || point == 960) {
         num = 28;
-    } else if (point = 930 || 950 || 970) {
+    } else if (point == 930 || point == 950 || point == 970) {
         num = 29;
     } else if (point < 1035) {
         num = 30;
     } else if (point < 1075) {
         num = 31;
-    } else if (point = 1110 || 1170) {
+    } else if (point == 1110 || point == 1170) {
         num = 32;
     } else if (point < 1135) {
         num = 33;
     } else if (point < 1155) {
         num = 34;
-    } else if (point = 1160) {
+    } else if (point == 1160) {
         num = 35;
     } else {
         num = 36;
