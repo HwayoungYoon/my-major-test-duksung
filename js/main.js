@@ -5,7 +5,7 @@ const u_name = document.querySelector('input[type=text]');
 const wrap = document.getElementById('wrap');
 const tabletMQL = window.matchMedia("all and (min-width: 768px)");
 const pcMQL = window.matchMedia("all and (min-width: 1024px)");
-const ENDPOINT = 11;
+const ENDPOINT = 20;
 const select = [];
 let qIdx = -1;
 
@@ -55,82 +55,80 @@ const calcScore = () => {
 /* 계산식 결과 이용한 분류 */
 const sortResult = (point) => {
     let num = 0;
-    if (point < 115) {
+    if (point = 110) {
         num = 0;
-    } else if (point < 129) {
+    } else if (point = 120) {
         num = 1;
-    } else if (point < 143) {
+    } else if (point = 130) {
         num = 2;
-    } else if (point < 157) {
+    } else if (point = 140) {
         num = 3;
-    } else if (point < 171) {
+    } else if (point = 150) {
         num = 4;
-    } else if (point < 185) {
+    } else if (point = 160) {
         num = 5;
-    } else if (point < 200) {
+    } else if (point = 170) {
         num = 6;
-    } else if (point < 250) {
+    } else if (point < 235) {
         num = 7;
-    } else if (point < 300) {
+    } else if (point < 275) {
         num = 8;
-    } else if (point < 334) {
+    } else if (point = 310 || 340 || 360) {
         num = 9;
-    } else if (point < 367) {
+    } else if (point = 320 || 370) {
         num = 10;
-    } else if (point < 400) {
+    } else if (point = 330 || 350) {
         num = 11;
-    } else if (point < 420) {
+    } else if (point < 425) {
         num = 12;
-    } else if (point < 440) {
+    } else if (point = 430) {
         num = 13;
-    } else if (point < 460) {
+    } else if (point < 455) {
         num = 14;
-    } else if (point < 480) {
+    } else if (point = 460) {
         num = 15;
-    } else if (point < 500) {
+    } else if (point = 470) {
         num = 16;
-    } else if (point < 534) {
+    } else if (point = 510 || 530 || 570) {
         num = 17;
-    } else if (point < 567) {
+    } else if (point = 520 || 540 || 550 || 560) {
         num = 18;
-    } else if (point < 600) {
+    } else if (point = 610 || 620 || 630 || 660) {
         num = 19;
-    } else if (point < 650) {
+    } else if (point = 640 || 650 || 670) {
         num = 20;
-    } else if (point < 700) {
+    } else if (point = 710 || 760) {
         num = 21;
-    } else if (point < 725) {
+    } else if (point = 720 || 770) {
         num = 22;
-    } else if (point < 750) {
+    } else if (point = 730) {
         num = 23;
-    } else if (point < 775) {
+    } else if (point < 755) {
         num = 24;
-    } else if (point < 800) {
+    } else if (point = 810 || 820 || 840 || 860) {
         num = 25;
-    } else if (point < 850) {
+    } else if (point = 830 || 850 || 870) {
         num = 26;
-    } else if (point < 900) {
+    } else if (point = 910 || 940) {
         num = 27;
-    } else if (point < 934) {
+    } else if (point = 920 || 960) {
         num = 28;
-    } else if (point < 967) {
+    } else if (point = 930 || 950 || 970) {
         num = 29;
-    } else if (point < 1000) {
+    } else if (point < 1075) {
         num = 30;
-    } else if (point < 1100) {
+    } else if (point < 1135) {
         num = 31;
-    } else if (point < 1150) {
+    } else if (point < 1175) {
         num = 32;
-    } else if (point < 1200) {
+    } else if (point = 1210 || 1270) {
         num = 33;
-    } else if (point < 1225) {
+    } else if (point < 1235) {
         num = 34;
-    } else if (point < 1250) {
+    } else if (point < 1255) {
         num = 35;
-    } else if (point < 1275) {
-        num = 36;
     } else {
-        num = 37;
+        num = 36;
     }
     return num;
 }
@@ -148,10 +146,21 @@ const goResult = () => {
     const point = calcScore();
     const grade = sortResult(point);
     const pTitle = document.querySelector('.p');
+    /* const res_point = document.querySelector('.point');
+    const pin = document.querySelector('.pin'); */
+    const img_url = 'img/image-' + grade + '.png';
+    const res_img = document.createElement('img');
+    const res_img_div = document.querySelector('.art');
     const major = document.querySelector('.result');
     const desc = document.querySelector('.res');
 
     pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
+    /* res_point.innerHTML = point + '점';
+    pin.style.marginLeft = infoList[grade].mLeft; */
+    res_img.src = img_url;
+    res_img.alt = infoList[grade].name;
+    res_img.title = infoList[grade].name;
+    res_img_div.appendChild(res_img);
     major.innerHTML = infoList[grade].name;
     desc.innerHTML = infoList[grade].desc;
 
