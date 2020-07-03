@@ -55,7 +55,7 @@ const calcScore = () => {
 /* 계산식 결과 이용한 분류 */
 const sortResult = (point) => {
     let num = 0;
-    if (point = 110) {
+    if (point == 110) {
         num = 0;
     } else if (point == 120) {
         num = 1;
