@@ -146,8 +146,8 @@ const goResult = () => {
     const point = calcScore();
     const grade = sortResult(point);
     const pTitle = document.querySelector('.p');
-    const res_point = document.querySelector('.point');
-    const pin = document.querySelector('.pin');
+    /* const res_point = document.querySelector('.point');
+    const pin = document.querySelector('.pin'); */
     const img_url = 'img/duksae/image-' + grade + '.jpg';
     const res_img = document.createElement('img');
     const res_img_div = document.querySelector('.art');
@@ -155,8 +155,8 @@ const goResult = () => {
     const desc = document.querySelector('.res');
 
     pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
-    res_point.innerHTML = point + '점';
-    pin.style.marginLeft = infoList[grade].mLeft;
+    /* res_point.innerHTML = point + '점';
+    pin.style.marginLeft = infoList[grade].mLeft; */
     res_img.src = img_url;
     res_img.alt = infoList[grade].name;
     res_img.title = infoList[grade].name;
