@@ -144,9 +144,9 @@ const goResult = () => {
 
     const result = document.getElementById('result');
     const point = calcScore();
-    const grade = sortResult(point);
     const pTitle = document.querySelector('.p');
     const res_point = document.querySelector('.point');
+    const grade = sortResult(res_point);
     const pin = document.querySelector('.pin');
     const img_url = 'img/image-' + grade + '.png';
     const res_img = document.createElement('img');
