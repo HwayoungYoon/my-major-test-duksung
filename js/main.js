@@ -73,41 +73,41 @@ const sortResult = (point) => {
         num = 7;
     } else if (point < 275) {
         num = 8;
-    } else if (point = 310 || 340 || 360) {
+    } else if (point < 325) {
         num = 9;
-    } else if (point = 320 || 370) {
+    } else if (point = 330) {
         num = 10;
-    } else if (point = 330 || 350) {
+    } else if (point < 355) {
         num = 11;
-    } else if (point < 425) {
+    } else if (point = 360) {
         num = 12;
-    } else if (point = 430) {
+    } else if (point = 370) {
         num = 13;
-    } else if (point < 455) {
+    } else if (point = 410 || 430 || 470) {
         num = 14;
-    } else if (point = 460) {
+    } else if (point = 420 || 440 || 450 || 460) {
         num = 15;
-    } else if (point = 470) {
+    } else if (point = 510 || 520 || 530 || 560) {
         num = 16;
-    } else if (point = 510 || 530 || 570) {
+    } else if (point = 540 || 550 || 570) {
         num = 17;
-    } else if (point = 520 || 540 || 550 || 560) {
+    } else if (point = 610 || 640 || 660) {
         num = 18;
-    } else if (point = 610 || 620 || 630 || 660) {
+    } else if (point = 620 || 670) {
         num = 19;
-    } else if (point = 640 || 650 || 670) {
+    } else if (point = 630 || 650) {
         num = 20;
-    } else if (point = 710 || 760) {
+    } else if (point = 710 || 720 || 740 || 760) {
         num = 21;
-    } else if (point = 720 || 770) {
+    } else if (point = 730 || 750 || 770) {
         num = 22;
-    } else if (point = 730) {
+    } else if (point = 810 || 860) {
         num = 23;
-    } else if (point < 755) {
+    } else if (point = 820 || 870) {
         num = 24;
-    } else if (point = 810 || 820 || 840 || 860) {
+    } else if (point = 830) {
         num = 25;
-    } else if (point = 830 || 850 || 870) {
+    } else if (point = 840 || 850) {
         num = 26;
     } else if (point = 910 || 940) {
         num = 27;
@@ -115,17 +115,17 @@ const sortResult = (point) => {
         num = 28;
     } else if (point = 930 || 950 || 970) {
         num = 29;
-    } else if (point < 1075) {
+    } else if (point < 1035) {
         num = 30;
-    } else if (point < 1135) {
+    } else if (point < 1075) {
         num = 31;
-    } else if (point < 1175) {
+    } else if (point = 1110 || 1170) {
         num = 32;
-    } else if (point = 1210 || 1270) {
+    } else if (point < 1135) {
         num = 33;
-    } else if (point < 1235) {
+    } else if (point < 1155) {
         num = 34;
-    } else if (point < 1255) {
+    } else if (point = 1160) {
         num = 35;
     } else {
         num = 36;
