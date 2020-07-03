@@ -4,7 +4,7 @@ const qnaList = [
         a: [
             {answer: '노트북', score: 150},
             {answer: '손필기', score: 50},
-            {answer: '태블릿필기', score: 250}
+            {answer: '태블릿 필기', score: 250}
         ]
     },
     {
