@@ -157,12 +157,12 @@ const goResult = () => {
     pTitle.innerHTML = u_name.value + ' 님에게 맞는 전공은';
     /* res_point.innerHTML = point + '점';
     pin.style.marginLeft = infoList[grade].mLeft; */
-    major.innerHTML = infoList[grade].name;
-    desc.innerHTML = infoList[grade].desc;
     res_img.src = img_url;
     res_img.alt = infoList[grade].name;
     res_img.title = infoList[grade].name;
     res_img_div.appendChild(res_img);
+    major.innerHTML = infoList[grade].name;
+    desc.innerHTML = infoList[grade].desc;
 
     setTimeout(() => {
         header.style.display = 'block';
