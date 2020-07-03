@@ -5,7 +5,7 @@ const u_name = document.querySelector('input[type=text]');
 const wrap = document.getElementById('wrap');
 const tabletMQL = window.matchMedia("all and (min-width: 768px)");
 const pcMQL = window.matchMedia("all and (min-width: 1024px)");
-const ENDPOINT = 3;
+const ENDPOINT = 10;
 const select = [];
 let qIdx = -1;
 
